@@ -1,0 +1,148 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Administrator</title>
+
+</head>
+
+<body >
+
+<p><font color="#800000" size="5">Administrator: </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#800000">&nbsp;
+  <a href="help\adminstrator.html">Help&amp; Support</a></font></p>
+<div align="center">
+  <center>
+  <table border="3" cellpadding="10" cellspacing="0" style="border-collapse: collapse" bordercolor="#C0C0C0" width="100%" height="283" dir="ltr">
+    <tr>
+      <td width="50%" height="283">
+      <form method="POST" name="create"  action="createAccount.jsp" >
+        <p>
+        <font color="#800000" size="4">create new account:</font></p>
+        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+          <tr>
+            <td width="50%">account description:</td>
+            <td width="50%">
+            <input type="text" name="description" size="25" maxlength="50"></td>
+          </tr>
+          <tr>
+            <td width="50%">user name:&nbsp;&nbsp; </td>
+            <td width="50%">
+            <input type="text" name="username" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">password:&nbsp;&nbsp; </td>
+            <td width="50%">
+            <input type="password" name="password" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">confirm password:&nbsp;&nbsp;&nbsp; </td>
+            <td width="50%">
+            <input type="password" name="confirmPass" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">start date i.e 22-3-2003:</td>
+            <td width="50%">
+            <input type"text" name="startDD" size="2" maxlength="2">
+            <input type"text" name="startMM" size="2" maxlength="2">
+            <input type="text" name="startYYYY" size="4" maxlength="4" ></td>
+          </tr>
+          <tr>
+            <td width="50%">end date: </td>
+            <td width="50%">
+              <input type"text" name="endDD" size="2" maxlength="2">
+              <input type"text" name="endMM" size="2" maxlength="2">
+              <input type="text" name="endYYYY" size="4" maxlength="4" >
+            </td>
+          </tr>
+        </table>
+        <hr>
+        <dl>
+          <dt><b>permissions:</b></dt>
+          <dt>allow defining new document type:&nbsp;&nbsp;
+          <input type="checkbox" name="allow_def" value="ON"> </dt>
+        </dl>
+        <p>&nbsp; <input type="submit" value="Create Account" name="confirm">&nbsp;<input type="reset" value="Reset" name="B2"> </p>
+      </form>
+      </td>
+      <td width="479" height="283">
+      <form method="POST" name="change" action="changeAccount.jsp">
+        <p>
+        <font size="4" color="#800000">change existing account:</font></p>
+        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+          <tr>
+            <td width="50%">old user name: </td>
+            <td width="50%">
+            <input type="text" name="olduser" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">old password </td>
+            <td width="50%">
+            <input type="password" name="oldpass" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">new user name: </td>
+            <td width="50%">
+            <input type="text" name="newuser" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">new password:&nbsp; </td>
+            <td width="50%">
+            <input type="password" name="newpass" size="25" maxlength="25"></td>
+          </tr>
+          <tr>
+            <td width="50%">new start date i.e 22-3-2003:</td>
+            <td width="50%">
+            <input type"text" name="startDD" size="2" maxlength="2">
+            <input type"text" name="startMM" size="2" maxlength="2">
+            <input type="text" name="startYYYY" size="4" maxlength="4" ></td>
+          </tr>
+          <tr>
+            <td width="50%">new end date: </td>
+            <td width="50%">
+              <input type"text" name="endDD" size="2" maxlength="2">
+              <input type"text" name="endMM" size="2" maxlength="2">
+              <input type="text" name="endYYYY" size="4" maxlength="4" >
+            </td>
+          </tr>
+        </table>
+        <hr>
+        <dl>
+          <dt><b>permissions:</b></dt>
+          <dt>allow defining new document type:&nbsp;&nbsp;
+          <input type="checkbox" name="allow_def" value="ON"></dt>
+        </dl>
+        <p><input type="submit" value="confirm changes" name="confirm">&nbsp; <input type="reset" value="Reset" name="B2"></p>
+      </form>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<br>
+<form method="POST" action="UsersList.jsp" >
+  <p>
+  <input type="submit" value="show a list of system users" name="userslist"></p>
+</form>
+
+<hr>
+<form method="POST" action="changeAdminPass.jsp">
+  change your password as Administrator: <input type="password" name="newPass" >
+  <input type="submit" value="change password" >
+</form>
+
+<hr>
+<form method="POST" action="workLoad.jsp">
+  <input type="submit" value="show work Load for all positions" >
+  <br><a href="newPath.jsp"> define new document type for other positions </a>
+</form>
+
+<hr>
+<form method="POST" action="SignOut.jsp">
+  <input type="submit" value="Sign Out">
+</form>
+
+</body>
+
+</html>
